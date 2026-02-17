@@ -13,15 +13,17 @@ To begin, we set up a second identical host server. We split the critical servic
 | DHCP | dc1 | dc2|
 | File Sharing | fs1 | fs2|
 
-Active directory synchronizes automatically and if er set the DCs up correctly, so does DNS and DHCP.
+Active directory synchronizes automatically and if you set the DCs up correctly, so does DNS and DHCP.
 
 We can set the file servers up to synchronize using DFS and similar technologies (look it up!).
 
-We could still lose an entire VM! So I will write a script such that each VM shuts down during the night and makes a copy of itself to the other server.
-
+We could still lose an entire VM! So I will write a script such that each VM shuts down during the night and makes a copy of itself to the other host.
 
 ## Backups
 I will supply a tape backup system (or two!) for each host. I need to design a backup strategy. I will also do a backup on the VMs, at a certain frequency.
 
 ## Disaster Recovery
-Some of my takes will go off site to a data safe. I will have a spare tape drive at that location, and an inexpensive server (Host 3). I will periodically test restores to this system.
+Some of my tapes will go off site to a _data safe_. I will have a spare tape drive at that location, and an inexpensive server (Host 3). I will periodically test restores to this system.
+
+## Making it work
+It must be someones job to make sure this all works, define quality assurance for this, regular test!
