@@ -1,0 +1,6 @@
+# Location of Data
+Historically, data was everywhere, on laptops, PDAs, tablets, PCs and servers. Modern practices and data protection regulations should be minimizing this. We need to apply some basic rules.
+
+If we are holding data on a mobile device, it needs to be restricted to fixed locations on that device. Data in these locations must be encrypted and protected and as part of this protection, must be backup up. The normal procedure currently is to synchronize data with either domain file servers or with the cloud. A lost mobile device must not result in either data compromise or data loss. 
+
+Where data is located on servers, it must be in structured, well defined locations, with rules. I do not believe current practices are compliant with emerging legislative requirements; personally, I think the entire concept of file shares for any data that is subject to DP is dead. Data needs to be stored with rich meta-data and although this is technically possible in file shares, its very difficult to implement and police. In any greenfield site, I would implement a document management system, at a minimum, something like Sharepoint.
