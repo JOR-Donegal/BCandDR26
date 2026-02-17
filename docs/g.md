@@ -1,0 +1,7 @@
+# Operational backup and restore.
+Operational backup and restore is the most common backup/restore activity. During the ordinary course of business, a requirement exists to restore data to a point in time, due to accidental deletion, or corruption, the requirement for a roll-back, or some other happenstance event. Restores are most commonly of files or whole directories. Occasionally there may be a requirement for database restores. It may be that training is required to minimize the need for restores.
+
+Backup windows need to be identified, where file systems and databases can be locked for backup; for example, in the Institute, from 2200-0700. If a system is live when we attempt the backup, we call that a hot backup. For systems which are continuously live, special agents are required to make consistent backups. Databases may be particularly difficult, as they consist of many files. In the case of either file systems or databases everything must be consistent in a backup, to make the backup usable.
+
+If we can shut down an application or system before backing it up, this is a cold backup and is normally preferred for data consistency and performance. When backing up file system data, it may be impossible for the backup system to get a file lock if the file is open, these files are locked by the underlying OS. Sometimes client software may be able to interact with the OS to make a copy of locked files for backup.
+

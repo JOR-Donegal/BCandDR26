@@ -1,7 +1,10 @@
 # Terminology
 Before we start, terminology again!
 
-_Storage_ is where we are keeping data, for domestic use, a workstations disks. On a server, a storage array. In a data center, a dedicated storage device, like _Network Attached Storage_ (NAS) or a _Storage Area Network_ (SAN).
+_Storage_ is where we are keeping data.
+- For domestic use, a workstations disks. 
+- On a server, a storage array. 
+- In a data center, a dedicated storage device, like _Network Attached Storage_ (NAS) or a _Storage Area Network_ (SAN).
 
 A _backup_ is the process of creating duplicate copies of data retained solely to allow for its recovery should it be lost, deleted, or corrupted. 
 Live synchronizing to a cloud store is not a backup! 
