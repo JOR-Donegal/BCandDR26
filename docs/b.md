@@ -16,3 +16,5 @@ If I am spec’ing a backup system for an SME, I insist that the backups are for
 Backups are essential and so is the quality assurance, knowing that the backups work. In an SME, I specify that a test restore needs to be done once a week. It is the only way to be sure the backups are working.
 
 With larger sites, the principle is the same, but the frequency and detail of checks will be different. In any DR exercise these processes will be procedural, complex, and thorough. The QA testing is a very effective way of ensuring that data recovery can take place, it is a good exercise to prepare for a real incident of potential data loss. Gaps are identified and mitigated, and the recovery team become familiar with the processes. 
+
+In a data archive, _durability_ refers to the ability of stored data to remain intact, uncorrupted, and permanently preserved over long periods of time, even in the face of hardware failures, software errors, or environmental issues.

@@ -3,4 +3,4 @@ Long term backups may be required for compliance or regulatory reasons. Most bus
 
 Each system will have an associated dataset and policies may be different for each. For example, the payroll system may only require backups once per month if the payroll is only run once a month. However, we may need to keep the records indefinitely, due to superannuation and pension requirements.
 A
-t the expiration date, media must be securely erased [3]. Although most standards say this should be done, the detail of how to do it is left to the user [4].
+t the expiration date, media must be securely erased. Although most standards say this should be done, the detail of how to do it is left to the user.

@@ -5,10 +5,11 @@ Backup is complicated and normally requires the use of specialized software. Bac
 - Tape has been used for +50 years, it is linear and sequential. It is still the cheapest way to store large capacities over long time periods.
 - Disk may be used in tape emulation mode and is now the most normal way to do initial backup.
 - Disks can be used in an array for performance.
-- Customized storage systems with deduplication
-- Cloud storage, such as Amazon Glacier
+- With customized storage systems we can save space and time with _deduplication_
+- Cloud storage, such as Amazon Glacier or [Wasabi](https://wasabi.com/)
 
 Backups are normally scheduled and for typical office applications, will be run after closing hours.
+
 An SME might backup directly to tape after hours. For larger operations, backup will be to disk during a backup window and to tape or cloud at some point afterwards.
 
 Systems which are always on are much more complex to plan. A partition might be snapshotted to allow for a stable copy to be taken. It could be mirrored to a different location and the backup taken of the mirror.
