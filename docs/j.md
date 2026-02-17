@@ -1,12 +1,27 @@
-# Finally
-I am very critical of most standards bodies. In many cases they appear like a paper mill over necessary waffle! Some of the relevant standards for this section include;
+# SME Strategy
+To finish I want to suggest a simple strategy for an SME. 
 
-| Standard / Framework | Focus Area                        |
-| -------------------- | --------------------------------- |
-| ISO/IEC 27001        | Secure backup & recovery controls |
-| ISO 22301            | Business continuity & resilience  |
-| NIST SP 800-34       | Disaster recovery planning        |
-| NIST SP 800-53       | Security & recovery controls      |
-| ITIL                 | IT service continuity             |
-| COBIT                | Governance & control objectives   |
+## Business Continuity
+For business continuity I want to design a system where if a server fails, we can just keep on working on the same site. I'm going to presume that you've been able to consolidate services onto a single host server.
 
+To begin, we set up a second identical host server. We split the critical services amongst the two hosts.
+
+| Service     | Host1       | Host2   |
+| ----------- | ----------- |---------|
+| AAA| dc1 | dc2 |
+| DNS | dc1 | dc2|
+| DHCP | dc1 | dc2|
+| File Sharing | fs1 | fs2|
+
+Active directory synchronizes automatically and if er set the DCs up correctly, so does DNS and DHCP.
+
+We can set the file servers up to synchronize using DFS and similar technologies (look it up!).
+
+We could still lose an entire VM! So I will write a script such that each VM shuts down during the night and makes a copy of itself to the other server.
+
+
+## Backups
+I will supply a tape backup system (or two!) for each host. I need to design a backup strategy. I will also do a backup on the VMs, at a certain frequency.
+
+## Disaster Recovery
+Some of my takes will go off site to a data safe. I will have a spare tape drive at that location, and an inexpensive server (Host 3). I will periodically test restores to this system.
